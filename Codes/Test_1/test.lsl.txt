@@ -1,0 +1,60 @@
+// Script pour simuler les mouvements du bras avec des données de positions
+
+list armPositions;  // Liste pour stocker les positions du bras
+
+integer currentIndex = 0;  // Index actuel dans la liste des positions
+float moveSpeed = 0.5;  // Vitesse de déplacement du bras
+
+default
+{
+    state_entry()
+    {
+        // Charger les positions du bras à partir du fichier CSV
+        string csvData = "chemin/vers/votre/fichier.csv";  // Remplacez par le chemin correct de votre fichier CSV
+        
+        // Charger les positions du bras à partir du fichier CSV
+        list csvLines = llParseString2List(csvData, [",", "\n"], []);
+        integer numLines = llGetListLength(csvLines);
+        
+        // Parcourir les lignes du fichier CSV et extraire les positions
+        for (integer i = 0; i < numLines; i++)
+        {
+            string csvLine = llList2String(csvLines, i);
+            list csvValues = llParseString2List(csvLine, [","], []);
+            
+            // Récupérer la position du bras (x, y, z)
+            float x = (float)llList2String(csvValues, 0);
+            float y = (float)llList2String(csvValues, 1);
+            float z = (float)llList2String(csvValues, 2);
+            
+            // Ajouter la position à la liste des positions du bras
+            armPositions += <x, y, z>;
+        }
+        
+        // Démarrer le mouvement du bras
+        llSetTimerEvent(moveSpeed);
+    }
+    
+    timer()
+    {
+        // Vérifier si toutes les positions ont été atteintes
+        if (currentIndex >= llGetListLength(armPositions))
+        {
+            llSetTimerEvent(0.0);  // Arrêter le mouvement du bras
+            return;
+        }
+        
+        // Obtenir la position actuelle du bras
+        vector currentPosition = llGetPos();
+        
+        // Obtenir la prochaine position du bras dans la liste des positions
+        vector nextPosition = llList2Vector(armPositions, currentIndex);
+        
+        // Déplacer progressivement le bras vers la prochaine position
+        vector newPosition = llVecLerp(currentPosition, nextPosition, moveSpeed);
+        llSetPos(newPosition);
+        
+        // Passer à la prochaine position dans la liste des positions
+        currentIndex++;
+    }
+}

@@ -1,0 +1,15 @@
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\bin\Debug\net6.0\Test_1.exe
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\bin\Debug\net6.0\Test_1.deps.json
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\bin\Debug\net6.0\Test_1.runtimeconfig.json
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\bin\Debug\net6.0\Test_1.dll
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\bin\Debug\net6.0\Test_1.pdb
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.AssemblyInfo.cs
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.dll
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\refint\Test_1.dll
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.pdb
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\Test_1.genruntimeconfig.cache
+C:\Users\PC\Documents\GitHub\OpenSim\Codes\Test_1\Test_1\obj\Debug\net6.0\ref\Test_1.dll
