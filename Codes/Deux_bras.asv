@@ -16,13 +16,8 @@ distance_epaules = 5;
 x1(1) = -distance_epaules/2; % Coordonnée x de l'épaule du premier bras
 x2(1) = distance_epaules/2; % Coordonnée x de l'épaule du deuxième bras
 
-% Initialisation des tableaux pour enregistrer les coordonnées
-x1_values = [];
-y1_values = [];
-z1_values = [];
-x2_values = [];
-y2_values = [];
-z2_values = [];
+% Initialisation du tableau pour enregistrer les coordonnées
+coordinates = [];
 
 % Création de la figure
 figure;
@@ -46,14 +41,28 @@ for t = 0:0.1:2*pi % Variation du temps (angle)
     y2(3) = y2(2) + 3*sin(t + pi); % Mouvement du coude (décalage de pi)
     z2(3) = 3*sin(t + pi); % Mouvement du coude (décalage de pi)
     
-    % Ajout des coordonnées à chaque tableau
-    x1_values = [x1_values; x1(1) x1(2) x1(3)];
-    y1_values = [y1_values; y1(1) y1(2) y1(3)];
-    z1_values = [z1_values; z1(1) z1(2) z1(3)];
-    x2_values = [x2_values; x2(1) x2(2) x2(3)];
-    y2_values = [y2_values; y2(1) y2(2) y2(3)];
-    z2_values = [z2_values; z2(1) z2(2) z2(3)];
+    % Ajout des coordonnées à la matrice
+% Ajout des coordonnées à chaque tableau
+    x1_values = [x1_values; x1(1)];
+    y1_values = [y1_values; y1(1)];
+    z1_values = [z1_values; z1(1)];
+    x2_values = [x2_values; x2(1)];
+    y2_values = [y2_values; y2(1)];
+    z2_values = [z2_values; z2(1)];
+end
 
+% Enregistrement des coordonnées dans un fichier CSV
+coordinates = [x1_values, y1_values, z1_values, x2_values, y2_values, z2_values];
+headers = {'x1', 'y1', 'z1', 'x2', 'y2', 'z2'};
+writematrix(coordinates, 'coordonnees.csv', 'Delimiter', ',', 'Header', headers);
+Ce code enregistrera les coordonnées x, y et z du premier bras dans les colonnes 'x1', 'y1' et 'z1', et les coordonnées du deuxième bras dans les colonnes 'x2', 'y2' et 'z2' d'un fichier CSV nommé "coordonnees.csv". Chaque ligne du fichier CSV représentera les coordonnées à un instant donné.
+
+
+
+
+
+
+Regenerate response
     % Affichage des bras
     plot3(x1, y1, z1, 'bo-', 'LineWidth', 2); % Premier bras (ligne bleue avec des cercles)
     hold on;
@@ -86,10 +95,7 @@ for t = 0:0.1:2*pi % Variation du temps (angle)
         cla;
     end
 
-end
-
 % Enregistrement des coordonnées dans un fichier CSV
-coordinates = [x1_values, y1_values, z1_values, x2_values, y2_values, z2_values];
-headers = {'x1_épaule','x1_coude','x1_poignet','y1_épaule','y1_coude','y1_poignet','z1_épaule','z1_coude','z1_poignet','x2_épaule','x2_coude','x2_poignet','y2_épaule','y2_coude','y2_poignet','z2_épaule','z2_coude','z2_poignet'};
-data = [headers; num2cell(coordinates)];
-writecell(data, 'coordonnees.csv', 'Delimiter', ',');
+writematrix('coordonnees.csv', coordinates);
+
+end

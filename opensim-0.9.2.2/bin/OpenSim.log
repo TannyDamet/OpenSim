@@ -2967,3 +2967,46 @@ Work items waiting         : 0
 Total process threads: 29
 
 
+2023-06-16 15:44:43,922 DEBUG [INVENTORY ACCESS MODULE]: Received request to create inventory item New Gesture in folder 00000000-0000-0000-0000-000000000000, transactionID 00000000-0000-0000-0000-000000000000
+2023-06-16 15:44:43,951 DEBUG [INVENTORY ACCESS MODULE]: Requested folder not found but found folder for type 20
+2023-06-16 15:44:43,977 DEBUG [AGENT INVENTORY]: Found folder Gestures type Gesture for item New Gesture
+2023-06-16 15:49:27,980 DEBUG DIAGNOSTICS
+
+Time now is 2023-06-16 15:49:27
+Server has been running since Friday, 2023-06-16 10:49:27
+That is an elapsed time of 05:00:00.7920531
+
+MEMORY STATISTICS
+Heap allocated to OpenSim   : 25 MB
+Heap allocation rate (last/avg): -0.506/-0.013MB/s
+Process memory:      Physical 31 MB 	 Paged 95 MB 	 Virtual 4813 MB
+Peak process memory: Physical 110 MB 	 Paged 102 MB 	 Virtual 4827 MB
+
+Total process Threads 28
+
+8 threads are being tracked:
+    ID                                  NAME   LAST UPDATE (MS)   LIFETIME (MS)     PRIORITY                            STATE
+     9              PollServiceWatcherThread                  0        18000047       Normal        Background, WaitSleepJoin
+    11                      MapBlocks (Home)               1297        17997484       Normal        Background, WaitSleepJoin
+    12                  Yengine sleep (Home)                391        17997234       Normal        Background, WaitSleepJoin
+    13                       YScript0 (Home)                391        17997234       Normal        Background, WaitSleepJoin
+    14                       YScript1 (Home)                281        17997234       Normal        Background, WaitSleepJoin
+    18               Incoming Packets (Home)                 63        17996625       Normal        Background, WaitSleepJoin
+    19               Outgoing Packets (Home)                  0        17996609       Normal        Background, WaitSleepJoin
+    21                      Heartbeat-(Home)                 78        17996203       Normal                    WaitSleepJoin
+
+Framework main threadpool 
+workers:    1 (1000 / 4)
+Completion: 0 (1000 / 4)
+
+Threadpool (excluding script engine pools)
+Thread pool used           : SmartThreadPool
+Max threads                : 300
+Min threads                : 2
+Allocated threads          : 3
+In use threads             : 1
+Work items waiting         : 0
+
+Total process threads: 28
+
+
